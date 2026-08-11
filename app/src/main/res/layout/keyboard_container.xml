@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboard_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2C2C2E">
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view_letters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:keyBackground="@drawable/key_background"
+        android:keyTextColor="#F2F2F2"
+        android:keyTextSize="18sp"
+        android:shadowColor="#00000000"
+        android:shadowRadius="0" />
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboard_view_symbols"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:keyBackground="@drawable/key_background"
+        android:keyTextColor="#F2F2F2"
+        android:keyTextSize="16sp"
+        android:shadowColor="#00000000"
+        android:shadowRadius="0" />
+
+    <LinearLayout
+        android:id="@+id/emoji_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="6dp">
+
+        <Button
+            android:id="@+id/emoji_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="← ABC"
+            android:textColor="#F2F2F2"
+            android:background="@drawable/key_background"
+            android:textAllCaps="false"
+            android:layout_marginBottom="6dp" />
+
+        <GridLayout
+            android:id="@+id/emoji_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="8" />
+
+    </LinearLayout>
+
+</FrameLayout>
